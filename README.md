@@ -1,20 +1,46 @@
 # Personal Website — Vasu Gupta
 
-A modern, responsive personal website built with **HTML, CSS, and JavaScript**, focused on **performance, accessibility, and clean UI**. Includes a visible **Sponsor** CTA to improve GitHub Sponsors approval.
+Fast, accessible, and user-friendly web experiences.
 
-**Live site (custom domain):** https://vasugupta.co/
+![License: MIT](https://img.shields.io/badge/License-MIT-success)
+![Made with HTML/CSS/JS](https://img.shields.io/badge/Made%20with-HTML%20|%20CSS%20|%20JS-informational)
 
-## How to use
-1. Update content in `about.html`, `skills.html`, and `projects.json`.
-2. Replace/optimize images in `assets/`.
-3. Commit and push to your GitHub repo.
-4. Deploy with GitHub Pages and set your custom domain to `vasugupta.co`.
+## Overview
+This is my personal website — a clean, responsive, and lightweight portfolio that highlights my work and skills. It uses semantic HTML, modern CSS, and a sprinkle of vanilla JavaScript to keep things fast and maintainable.
 
-## Files
-- `index.html` (home), `projects.html`, `skills.html`, `about.html`
-- `styles.css`, `script.js`, `projects.json`
-- `assets/` (logo, favicon, placeholders)
-- `CNAME` (custom domain), `robots.txt`, `sitemap.xml`
+- **Live:** https://vasugupta.co  
+- **Contact:** contact@vasugupta.co.in  
+- **Location:** Raipur, India
+
+## Features
+- **Responsive layout** that adapts across devices
+- **Accessible color contrast** and semantic markup
+- **SEO basics:** meta tags, Open Graph, `robots.txt`, and `sitemap.xml`
+- **Custom domain** support via `CNAME`
+- **Simple data source** (`projects.json`) to list projects without touching HTML
+
+## Pages
+- `index.html` — Home
+- `projects.html` — Highlighted projects
+- `skills.html` — Skills & focus areas
+- `about.html` — About me
+
+## Tech Stack
+- **HTML** for structure  
+- **CSS** for layout/visuals (dark-mode friendly)  
+- **JavaScript** for small enhancements and rendering the project grid
+
+## Quick Start
+```bash
+# clone
+git clone https://github.com/vasugupt07676-creator/personal-website.git
+cd personal-website
+
+# option 1: open locally
+# just open index.html in your browser
+
+# option 2: serve locally (recommended)
+npx serve .
 - `.gitignore`, `LICENSE`, `README.md`
 
 ---
