@@ -9,7 +9,7 @@ Fast, accessible, and user-friendly web experiences.
 This is my personal website — a clean, responsive, and lightweight portfolio that highlights my work and skills. It uses semantic HTML, modern CSS, and a sprinkle of vanilla JavaScript to keep things fast and maintainable.
 
 - **Live:** https://vasugupta.co  
-- **Contact:** contact@vasugupta.co.in  
+- **Contact:** contact@vasugupta.co 
 - **Location:** Raipur, India
 
 ## Features
