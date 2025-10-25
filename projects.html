@@ -1,48 +1,145 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="system">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Vasu Gupta</title>
-  <meta name="description" content="Highlighted projects by Vasu Gupta — fast, accessible, user-friendly web experiences." />
+  <meta name="description" content="Selected web projects by Vasu Gupta: performance, accessibility, and polished UIs." />
+  <link rel="canonical" href="https://vasugupta.co/projects.html" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Projects — Vasu Gupta" />
-  <meta property="og:description" content="Highlighted projects by Vasu Gupta — fast, accessible, user-friendly web experiences." />
+  <meta property="og:description" content="Selected web projects by Vasu Gupta: performance, accessibility, and polished UIs." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vasugupta.co/" />
+  <meta property="og:url" content="https://vasugupta.co/projects.html" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
-        <span class="brand-text">Vasu Gupta</span>
+        <a href="index.html" class="brand-link" aria-label="Back to home">
+          <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
+        </a>
+        <span class="brand-text">Projects</span>
       </div>
-      <nav aria-label="Primary" class="primary-nav">
+
+      <button class="theme-toggle" id="theme-toggle" aria-pressed="false" title="Toggle dark mode">
+        <span aria-hidden="true">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+
+      <button class="theme-toggle primary-nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" style="display:none">
+        <span aria-hidden="true">☰</span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav aria-label="Primary" class="primary-nav" id="primary-nav">
         <ul>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a aria-current="page" href="projects.html">Projects</a></li>
           <li><a href="skills.html">Skills</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></li>
+          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener noreferrer">Sponsor</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="section container" aria-labelledby="projects-title">
-      <h1 id="projects-title">Projects</h1>
-      <div id="project-grid" class="project-grid" aria-live="polite"></div>
+  <main id="main" class="container" style="padding-block: var(--space-8)">
+    <header style="margin-bottom: var(--space-6)">
+      <nav aria-label="Breadcrumb" class="trust-note"><a href="index.html">Home</a> / Projects</nav>
+      <h1 style="margin: .5rem 0 0">Selected Work</h1>
+      <p class="lede">A few representative builds focused on performance, accessibility, and clean UI.</p>
+    </header>
+
+    <!-- Filters (no JS required: jump links) -->
+    <div class="tech-badges" role="navigation" aria-label="Filter by tag" style="margin-bottom: var(--space-5)">
+      <a class="badge" href="#all">All</a>
+      <a class="badge" href="#performance">Performance</a>
+      <a class="badge" href="#design-system">Design System</a>
+      <a class="badge" href="#spa">React SPA</a>
+      <a class="badge" href="#a11y">Accessibility</a>
+    </div>
+
+    <!-- Projects grid -->
+    <section id="all" aria-labelledby="grid-title">
+      <h2 id="grid-title" class="sr-only">Project Grid</h2>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6)">
+
+        <!-- Project 1: Performance Audit -->
+        <article id="perf-audit" class="hero-card" style="display:flex; flex-direction:column">
+          <picture>
+            <img src="assets/hero.png" alt="Dashboard UI with charts and gauges" width="640" height="400" loading="lazy" decoding="async" />
+          </picture>
+          <div style="margin-top: var(--space-4)">
+            <h3 style="margin:0">Performance Audit Dashboard</h3>
+            <p class="trust-note">React • CWV • Code-splitting</p>
+            <p>Cut bundle by 42%, improved LCP to <strong>1.8s</strong>, CLS to <strong>0.02</strong>, and raised Lighthouse to <strong>95+</strong>.</p>
+          </div>
+          <div class="tech-badges" style="margin-top:auto">
+            <span class="badge">#performance</span>
+            <span class="badge">#spa</span>
+            <a class="btn btn-outline" href="#" aria-label="View case study: Performance Audit Dashboard">Case study</a>
+          </div>
+        </article>
+
+        <!-- Project 2: Design System -->
+        <article id="design-system" class="hero-card" style="display:flex; flex-direction:column">
+          <picture>
+            <img src="assets/hero.png" alt="Component library preview with buttons, forms, and tokens" width="640" height="400" loading="lazy" decoding="async" />
+          </picture>
+        <div style="margin-top: var(--space-4)">
+            <h3 style="margin:0">Mini Design System</h3>
+            <p class="trust-note">Tokens • Docs • A11y</p>
+            <p>Token-driven theming, accessible components, and Storybook-style docs to speed up builds.</p>
+          </div>
+          <div class="tech-badges" style="margin-top:auto">
+            <span class="badge">#design-system</span>
+            <span class="badge">#a11y</span>
+            <a class="btn btn-outline" href="#" aria-label="View case study: Mini Design System">Case study</a>
+          </div>
+        </article>
+
+        <!-- Project 3: React SPA -->
+        <article id="react-spa" class="hero-card" style="display:flex; flex-direction:column">
+          <picture>
+            <img src="assets/hero.png" alt="Clean single-page app interface" width="640" height="400" loading="lazy" decoding="async" />
+          </picture>
+          <div style="margin-top: var(--space-4)">
+            <h3 style="margin:0">Productivity SPA</h3>
+            <p class="trust-note">React • Routing • State</p>
+            <p>Delightful micro-interactions, robust state, and fast navigation for a smooth everyday workflow.</p>
+          </div>
+          <div class="tech-badges" style="margin-top:auto">
+            <span class="badge">#spa</span>
+            <a class="btn btn-outline" href="#" aria-label="View case study: Productivity SPA">Case study</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section aria-labelledby="contact-title" style="margin-top: var(--space-10)">
+      <h2 id="contact-title">Have a project in mind?</h2>
+      <p class="lede">I can help with frontend builds, performance, and accessibility improvements.</p>
+      <p><a class="btn" href="mailto:contact@vasugupta.co">contact@vasugupta.co</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2025 Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></p>
+      <p>© <span id="year"></span> Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator" class="link" rel="noopener noreferrer">Sponsor</a></p>
+      <div class="footer-links">
+        <a href="mailto:contact@vasugupta.co" class="link">Email</a>
+        <a href="https://github.com/vasugupt07676-creator" class="link" rel="me noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
