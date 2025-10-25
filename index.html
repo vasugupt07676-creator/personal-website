@@ -1,19 +1,26 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="system">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vasu Gupta — Web Developer</title>
-  <meta name="description" content="Fast, accessible, user-friendly web experiences. Portfolio and ways to collaborate or sponsor." />
+  <meta name="description" content="Fast, accessible, user-friendly web experiences. Portfolio, services, and ways to collaborate or sponsor." />
+  <link rel="canonical" href="https://vasugupta.co/" />
+  <meta name="theme-color" content="#0f1220" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7f8ff" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Vasu Gupta — Web Developer" />
-  <meta property="og:description" content="Fast, accessible, user-friendly web experiences. Portfolio and ways to collaborate or sponsor." />
+  <meta property="og:description" content="Fast, accessible, user-friendly web experiences. Portfolio, services, and ways to collaborate or sponsor." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vasugupta.co/" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -21,15 +28,13 @@
     "name": "Vasu Gupta",
     "url": "https://vasugupta.co/",
     "jobTitle": "Web Developer",
-    "email": "mailto:contact@vasugupta.co.in",
-    "sameAs": [
-      "https://github.com/vasugupt07676-creator"
-    ]
+    "email": "mailto:contact@vasugupta.co",
+    "sameAs": ["https://github.com/vasugupt07676-creator"]
   }
   </script>
-<button id="theme-toggle">🌙 Dark Mode</button>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
@@ -37,44 +42,116 @@
         <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
         <span class="brand-text">Vasu Gupta</span>
       </div>
-      <nav aria-label="Primary" class="primary-nav">
+
+      <!-- Theme + mobile buttons (wired by script.js) -->
+      <button class="theme-toggle" id="theme-toggle" aria-pressed="false" title="Toggle dark mode">
+        <span aria-hidden="true">🌙</span><span class="label">Dark</span>
+      </button>
+      <button class="theme-toggle primary-nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" style="display:none">
+        <span aria-hidden="true">☰</span><span class="sr-only">Menu</span>
+      </button>
+
+      <nav aria-label="Primary" class="primary-nav" id="primary-nav">
         <ul>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="skills.html">Skills</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></li>
+          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener noreferrer">Sponsor</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main id="main">
+    <!-- Hero -->
     <section class="hero container" aria-labelledby="intro-title">
       <div class="hero-text">
-        <h1 id="intro-title">I build fast, accessible, and user-friendly web experiences.</h1>
-        <p class="lede">
-          I'm a web developer specializing in HTML, CSS, JavaScript, React, and Node.js. I focus on performance,
-          clean UI, and great UX across devices.
-        </p>
-        <div class="cta-row">
-          <a class="btn" href="projects.html">View Projects</a>
-          <a class="btn btn-outline" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener">Sponsor my work</a>
+        <div class="hero-card">
+          <h1 id="intro-title">I build fast, accessible, and user-friendly web experiences.</h1>
+          <p class="lede">
+            I'm a web developer specializing in HTML, CSS, JavaScript, React, and Node.js. I focus on performance,
+            clean UI, and great UX across devices.
+          </p>
+
+          <div class="tech-badges" aria-label="Primary tech stack">
+            <span class="badge" aria-hidden="true">HTML</span>
+            <span class="badge" aria-hidden="true">CSS</span>
+            <span class="badge" aria-hidden="true">JavaScript</span>
+            <span class="badge" aria-hidden="true">React</span>
+            <span class="badge" aria-hidden="true">Node.js</span>
+            <span class="badge" aria-hidden="true">Accessibility</span>
+            <span class="badge" aria-hidden="true">Performance</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href="projects.html">View Projects</a>
+            <a class="btn btn-outline" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener noreferrer">Sponsor my work</a>
+          </div>
+          <p class="trust-note">Sponsorships help me dedicate more time to open-source and community learning.</p>
         </div>
-        <p class="trust-note">Sponsorships help me dedicate more time to open-source and community learning.</p>
       </div>
-      <picture class="hero-art">
-        <source srcset="assets/hero.webp" type="image/webp" />
-        <img src="assets/hero.png" alt="Abstract shapes representing web performance and accessibility" width="480" height="320" loading="lazy" decoding="async" />
-      </picture>
+
+      <div class="hero-art">
+        <picture>
+          <source srcset="assets/hero.webp" type="image/webp" />
+          <img src="assets/hero.png" alt="Abstract shapes representing web performance and accessibility" width="560" height="380" loading="lazy" decoding="async" />
+        </picture>
+      </div>
+    </section>
+
+    <!-- NEW: Highlights (quick social proof) -->
+    <section class="container" aria-labelledby="highlights-title">
+      <h2 id="highlights-title" class="sr-only">Highlights</h2>
+      <ul class="tech-badges" role="list">
+        <li class="badge" aria-label="Years of experience">3+ yrs</li>
+        <li class="badge" aria-label="Projects delivered">20+ projects</li>
+        <li class="badge" aria-label="Lighthouse scores">90–100 Lighthouse</li>
+        <li class="badge" aria-label="Accessibility first">A11y-first</li>
+      </ul>
+    </section>
+
+    <!-- NEW: Services (short and sweet) -->
+    <section class="container" aria-labelledby="services-title">
+      <h2 id="services-title">Services</h2>
+      <p class="lede">I partner with founders and teams to ship polished web apps and sites.</p>
+      <ul>
+        <li><strong>Frontend Dev:</strong> React SPAs, Next-style patterns, design systems.</li>
+        <li><strong>Performance:</strong> Core Web Vitals, image strategy, code-splitting.</li>
+        <li><strong>Accessibility:</strong> Semantic HTML, keyboard flows, screen reader UX.</li>
+      </ul>
+    </section>
+
+    <!-- NEW: Featured projects teaser -->
+    <section class="container" aria-labelledby="featured-title">
+      <h2 id="featured-title">Featured work</h2>
+      <p class="trust-note">A few representative builds — see more on the Projects page.</p>
+      <ul>
+        <li><a href="projects.html#perf-audit">Perf Audit Dashboard</a> — turned a slow app into a snappy one with 95+ CWV.</li>
+        <li><a href="projects.html#design-system">Mini Design System</a> — accessible components with tokens and docs.</li>
+        <li><a href="projects.html#react-spa">React SPA</a> — clean routing, state, and delightful UI details.</li>
+      </ul>
+      <p><a class="btn btn-outline" href="projects.html">Browse all projects</a></p>
+    </section>
+
+    <!-- NEW: Contact CTA -->
+    <section class="container" aria-labelledby="contact-title">
+      <h2 id="contact-title">Let’s build something</h2>
+      <p class="lede">Available for freelance and collaborations. Send a short brief or say hi.</p>
+      <p><a class="btn" href="mailto:contact@vasugupta.co">contact@vasugupta.co</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2025 Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></p>
+      <p>© <span id="year"></span> Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator" class="link" rel="noopener noreferrer">Sponsor</a></p>
+      <div class="footer-links">
+        <a href="mailto:contact@vasugupta.co" class="link">Email</a>
+        <a href="https://github.com/vasugupt07676-creator" class="link" rel="me noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
+  <!-- keep behavior and styles external -->
   <script src="script.js" defer></script>
 </body>
 </html>
