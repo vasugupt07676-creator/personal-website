@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Vasu Gupta
+# 🌐 Personal Portfolio
 
 > **Fast. Accessible. User-Friendly.**  
 > A modern, minimal portfolio showcasing my work, skills, and open-source projects.
