@@ -1,5 +1,3 @@
-// scripts/generate-sitemap.js
-// Minimal, dependency-free generator for static routes or .html pages.
 const fs = require("fs");
 const path = require("path");
 
