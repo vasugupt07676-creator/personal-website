@@ -1,9 +1,17 @@
 [
   {
     "title": "Personal Website",
-    "description": "This website \u2014 optimized for performance, accessibility, and clean UI.",
-    "stack": "HTML \u2022 CSS \u2022 JS",
-    "stars": "\u2014",
-    "link": "https://github.com/vasugupt07676-creator/personal-website"
+    "description": "This website — optimized for performance, accessibility, and clean UI.",
+    "stack": "HTML • CSS • JavaScript",
+    "tags": ["performance", "accessibility", "ui"],
+    "highlights": [
+      "Theme toggle with system support",
+      "Accessible navigation + skip link",
+      "SEO basics (OG tags, canonical, sitemap)"
+    ],
+    "image": "assets/hero.png",
+    "imageAlt": "Homepage hero section preview",
+    "live": "https://vasugupta.co/",
+    "github": "https://github.com/vasugupt07676-creator/personal-website"
   }
 ]
