@@ -1,59 +1,113 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="system">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skills — Vasu Gupta</title>
-  <meta name="description" content="Skills and focus areas: HTML, CSS, JavaScript, React, Node.js, performance, accessibility." />
+  <meta name="description" content="Skills and focus areas: HTML, CSS, JavaScript, React, Node.js, performance, and accessibility." />
+  <link rel="canonical" href="https://vasugupta.co/skills.html" />
+  <meta name="theme-color" content="#0f1220" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7f8ff" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="Skills — Vasu Gupta" />
-  <meta property="og:description" content="Skills and focus areas: HTML, CSS, JavaScript, React, Node.js, performance, accessibility." />
+  <meta property="og:description" content="Skills and focus areas: HTML, CSS, JavaScript, React, Node.js, performance, and accessibility." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vasugupta.co/" />
+  <meta property="og:url" content="https://vasugupta.co/skills.html" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
-        <span class="brand-text">Vasu Gupta</span>
+        <a href="index.html" class="brand-link" aria-label="Back to home">
+          <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
+        </a>
+        <span class="brand-text">Skills</span>
       </div>
-      <nav aria-label="Primary" class="primary-nav">
+
+      <button class="theme-toggle" id="theme-toggle" aria-pressed="false" title="Toggle dark mode">
+        <span aria-hidden="true">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+
+      <button class="theme-toggle primary-nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" style="display:none">
+        <span aria-hidden="true">☰</span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav aria-label="Primary" class="primary-nav" id="primary-nav">
         <ul>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="skills.html">Skills</a></li>
+          <li><a aria-current="page" href="skills.html">Skills</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></li>
+          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener noreferrer">Sponsor</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="section container" aria-labelledby="skills-title">
-      <h1 id="skills-title">Skills & Focus</h1>
-      <ul class="chip-list" role="list">
-        <li>HTML</li>
-        <li>CSS</li>
+  <main id="main" class="container" style="padding-block: var(--space-8)">
+    <header style="margin-bottom: var(--space-6)">
+      <nav aria-label="Breadcrumb" class="trust-note"><a href="index.html">Home</a> / Skills</nav>
+      <h1 style="margin: .5rem 0 0">Skills & Focus</h1>
+      <p class="lede">Modern frontend development with a performance + accessibility mindset.</p>
+    </header>
+
+    <section aria-labelledby="core-title" class="section" style="padding-top:0">
+      <h2 id="core-title">Core stack</h2>
+      <ul class="chip-list" role="list" aria-label="Core stack">
+        <li>HTML (Semantic)</li>
+        <li>CSS (Responsive, Tokens)</li>
         <li>JavaScript</li>
         <li>React</li>
         <li>Node.js</li>
-        <li>Performance</li>
-        <li>Accessibility</li>
-        <li>Responsive UI</li>
       </ul>
+    </section>
+
+    <section aria-labelledby="quality-title" class="section">
+      <h2 id="quality-title">Quality focus</h2>
+      <ul>
+        <li><strong>Performance:</strong> Core Web Vitals, image strategy, code-splitting, bundle hygiene.</li>
+        <li><strong>Accessibility:</strong> semantic HTML, keyboard support, visible focus, screen reader UX.</li>
+        <li><strong>UX polish:</strong> clean layout rhythm, micro-interactions, consistent components.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="tools-title" class="section">
+      <h2 id="tools-title">Tools I use</h2>
+      <ul class="chip-list" role="list" aria-label="Tools I use">
+        <li>Git / GitHub</li>
+        <li>Lighthouse</li>
+        <li>DevTools Performance</li>
+        <li>ESLint / Prettier</li>
+        <li>Figma handoff</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="contact-title" class="section">
+      <h2 id="contact-title">Want to collaborate?</h2>
+      <p class="lede">If you’re building something and want help shipping a polished web UI:</p>
+      <p><a class="btn" href="mailto:contact@vasugupta.co">contact@vasugupta.co</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2025 Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></p>
+      <p>© <span id="year"></span> Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator" class="link" rel="noopener noreferrer">Sponsor</a></p>
+      <div class="footer-links">
+        <a href="mailto:contact@vasugupta.co" class="link">Email</a>
+        <a href="https://github.com/vasugupt07676-creator" class="link" rel="me noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

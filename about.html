@@ -1,60 +1,122 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js" data-theme="system">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About — Vasu Gupta</title>
-  <meta name="description" content="About Vasu Gupta — web developer passionate about fast, accessible, user-friendly websites." />
+  <meta name="description" content="About Vasu Gupta — web developer focused on fast, accessible, user-friendly experiences." />
+  <link rel="canonical" href="https://vasugupta.co/about.html" />
+  <meta name="theme-color" content="#0f1220" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7f8ff" media="(prefers-color-scheme: light)" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="About — Vasu Gupta" />
-  <meta property="og:description" content="About Vasu Gupta — web developer passionate about fast, accessible, user-friendly websites." />
+  <meta property="og:description" content="About Vasu Gupta — web developer focused on fast, accessible, user-friendly experiences." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vasugupta.co/" />
+  <meta property="og:url" content="https://vasugupta.co/about.html" />
   <meta property="og:image" content="assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Vasu Gupta",
+    "url": "https://vasugupta.co/",
+    "jobTitle": "Web Developer",
+    "email": "mailto:contact@vasugupta.co",
+    "sameAs": ["https://github.com/vasugupt07676-creator"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <div class="brand">
-        <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
-        <span class="brand-text">Vasu Gupta</span>
+        <a href="index.html" class="brand-link" aria-label="Back to home">
+          <img src="assets/logo.svg" alt="VG logo" width="40" height="40" />
+        </a>
+        <span class="brand-text">About</span>
       </div>
-      <nav aria-label="Primary" class="primary-nav">
+
+      <button class="theme-toggle" id="theme-toggle" aria-pressed="false" title="Toggle dark mode">
+        <span aria-hidden="true">🌙</span>
+        <span class="label">Dark</span>
+      </button>
+
+      <button class="theme-toggle primary-nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav" style="display:none">
+        <span aria-hidden="true">☰</span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav aria-label="Primary" class="primary-nav" id="primary-nav">
         <ul>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="skills.html">Skills</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></li>
+          <li><a aria-current="page" href="about.html">About</a></li>
+          <li><a class="btn btn-sponsor" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener noreferrer">Sponsor</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main">
-    <section class="section container" aria-labelledby="about-title">
-      <h1 id="about-title">About</h1>
-      <p>
-        I’m Vasu Gupta — a web developer passionate about building fast, responsive, and accessible websites.
-        I write efficient code, love clean design, and enjoy collaborating on meaningful projects.
+  <main id="main" class="container" style="padding-block: var(--space-8)">
+    <header style="margin-bottom: var(--space-6)">
+      <nav aria-label="Breadcrumb" class="trust-note"><a href="index.html">Home</a> / About</nav>
+      <h1 style="margin: .5rem 0 0">Hi, I’m Vasu.</h1>
+      <p class="lede">I build fast, accessible, and user-friendly websites and web apps.</p>
+    </header>
+
+    <section aria-labelledby="what-title" class="section" style="padding-top:0">
+      <h2 id="what-title">What I do</h2>
+      <ul>
+        <li><strong>Frontend development:</strong> responsive UI, component-driven builds, clean semantics.</li>
+        <li><strong>Performance:</strong> Core Web Vitals improvements, image strategy, bundle optimization.</li>
+        <li><strong>Accessibility:</strong> keyboard flows, screen reader UX, and inclusive design patterns.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="now-title" class="section">
+      <h2 id="now-title">Right now</h2>
+      <p class="trust-note">A few things I’m focusing on (update this as your “Now” page):</p>
+      <ul>
+        <li>Improving my design-to-code workflow and building reusable UI patterns.</li>
+        <li>Deepening performance work (CWV, preloading, caching, and real-user metrics).</li>
+        <li>Shipping small open-source utilities and learning in public.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="sponsor-title" class="section">
+      <h2 id="sponsor-title">Support & links</h2>
+      <p>If my work helps you, consider supporting it:</p>
+      <p class="cta-row" style="margin-top: var(--space-4)">
+        <a class="btn" href="https://github.com/sponsors/vasugupt07676-creator" rel="noopener noreferrer">Sponsor on GitHub</a>
+        <a class="btn btn-outline" href="https://github.com/vasugupt07676-creator" rel="me noopener noreferrer">GitHub profile</a>
       </p>
-      <p>
-        If my work helps you or your team, consider <a href="https://github.com/sponsors/vasugupt07676-creator">sponsoring</a> so I can spend more time improving open-source
-        projects and sharing knowledge. You can also reach me at <a href="mailto:contact@vasugupta.co.in">contact@vasugupta.co.in</a>.
-      </p>
-      <p>
-        Find me on GitHub: <a href="https://github.com/vasugupt07676-creator">https://github.com/vasugupt07676-creator</a>
-      </p>
+    </section>
+
+    <section aria-labelledby="contact-title" class="section">
+      <h2 id="contact-title">Contact</h2>
+      <p class="lede">Have an idea or want a quick audit? Send a short brief.</p>
+      <p><a class="btn" href="mailto:contact@vasugupta.co">contact@vasugupta.co</a></p>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; 2025 Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator">Sponsor</a></p>
+      <p>© <span id="year"></span> Vasu Gupta • <a href="https://github.com/sponsors/vasugupt07676-creator" class="link" rel="noopener noreferrer">Sponsor</a></p>
+      <div class="footer-links">
+        <a href="mailto:contact@vasugupta.co" class="link">Email</a>
+        <a href="https://github.com/vasugupt07676-creator" class="link" rel="me noopener noreferrer">GitHub</a>
+      </div>
     </div>
   </footer>
 
+  <script src="script.js" defer></script>
 </body>
 </html>

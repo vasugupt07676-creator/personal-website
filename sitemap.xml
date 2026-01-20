@@ -2,43 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://vasugupt07676-creator.github.io/</loc>
-    <lastmod>2026-01-20T00:42:12.567Z</lastmod>
+    <loc>https://vasugupta.co/</loc>
+    <lastmod>2026-01-20T03:11:09.453Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://vasugupt07676-creator.github.io/about</loc>
-    <lastmod>2026-01-20T00:42:12.567Z</lastmod>
+    <loc>https://vasugupta.co/about.html</loc>
+    <lastmod>2026-01-20T03:11:09.453Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://vasugupt07676-creator.github.io/projects</loc>
-    <lastmod>2026-01-20T00:42:12.567Z</lastmod>
+    <loc>https://vasugupta.co/projects.html</loc>
+    <lastmod>2026-01-20T03:11:09.453Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://vasugupt07676-creator.github.io/skills</loc>
-    <lastmod>2026-01-20T00:42:12.568Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://vasugupt07676-creator.github.io/contact</loc>
-    <lastmod>2026-01-20T00:42:13.162Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://vasugupt07676-creator.github.io/blog</loc>
-    <lastmod>2026-01-20T00:42:13.162Z</lastmod>
+    <loc>https://vasugupta.co/skills.html</loc>
+    <lastmod>2026-01-20T03:11:09.454Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
