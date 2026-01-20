@@ -6,6 +6,12 @@ img,picture,svg,video,canvas{display:block;max-width:100%}
 input,button,textarea,select{font:inherit}
 :where(a){color:inherit}
 
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce){
+  html:focus-within{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important}
+}
+
 /* Design tokens */
 :root{
   --radius-s: .5rem;
@@ -52,12 +58,29 @@ input,button,textarea,select{font:inherit}
 }
 
 /* Global styles */
-body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; color:var(--text); background: radial-gradient(1200px 600px at 10% -10%,rgba(167,139,250,.35),transparent 60%), radial-gradient(800px 400px at 100% 20%,rgba(110,231,255,.25),transparent 60%), var(--bg);}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background: radial-gradient(1200px 600px at 10% -10%,rgba(167,139,250,.35),transparent 60%),
+              radial-gradient(800px 400px at 100% 20%,rgba(110,231,255,.25),transparent 60%),
+              var(--bg);
+  line-height:1.6
+}
+
+p{max-width:70ch}
+h1,h2,h3{line-height:1.15; letter-spacing:-.01em}
+.section{padding-block: var(--space-8)}
 
 .container{max-width:var(--max-w); margin-inline:auto; padding-inline: clamp(var(--space-4), 4vw, var(--space-6));}
 
 .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
 .skip-link:focus{left:var(--space-4);top:var(--space-4);width:auto;height:auto;z-index:999;background:var(--panel-strong);backdrop-filter: blur(8px);padding:var(--space-3) var(--space-4);border-radius:var(--radius-s);outline:var(--focus)}
+
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.link{text-decoration:underline; text-underline-offset:3px; color:var(--link)}
+.link:hover{opacity:.92}
+.link:focus-visible{outline:var(--focus); outline-offset:2px}
 
 /* Header */
 .site-header{position:sticky;top:0;z-index:50; backdrop-filter: blur(10px); background: color-mix(in oklab, var(--bg), transparent 30%); border-bottom:1px solid color-mix(in oklab, var(--text), transparent 92%)}
@@ -89,11 +112,15 @@ body{font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Hel
 .trust-note{font-size:.95rem; color:var(--muted)}
 
 .hero-card{position:relative; border:1px solid color-mix(in oklab, var(--text), transparent 88%); background:linear-gradient(180deg, color-mix(in oklab, var(--panel), transparent 30%), color-mix(in oklab, var(--panel-strong), transparent 10%)); padding: clamp(var(--space-4), 3vw, var(--space-6)); border-radius: var(--radius-l); box-shadow: var(--elev-2); overflow:hidden}
-.hero-card::after{content:""; position:absolute; inset:-20%; background: conic-gradient(from 0deg, transparent 70%, color-mix(in oklab, var(--brand-1), transparent 40%) 80%, color-mix(in oklab, var(--brand-2), transparent 35%) 88%, transparent 96%); filter: blur(40px); opacity:.7; animation: spin 20s linear infinite}
+.hero-card::after{content:""; position:absolute; inset:-20%; background: conic-gradient(from 0deg, transparent 70%, color-mix(in oklab, var(--brand-1), transparent 40%) 80%, color-mix(in oklab, var(--brand-2), transparent 35%) 88%, transparent 96%); filter: blur(40px); opacity:.7; animation: spin 20s linear infinite; animation-play-state: var(--spin, running)}
 @keyframes spin{to{transform: rotate(1turn)}}
 
 .tech-badges{display:flex; flex-wrap:wrap; gap:.5rem}
 .badge{border:1px solid color-mix(in oklab, var(--text), transparent 85%); background: color-mix(in oklab, var(--panel), transparent 10%); padding:.35rem .6rem; border-radius:999px; font-size:.85rem}
+
+/* Chips / tag lists (Skills page) */
+.chip-list{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:var(--space-5) 0 0;padding:0}
+.chip-list > li{border:1px solid color-mix(in oklab, var(--text), transparent 85%);background: color-mix(in oklab, var(--panel), transparent 10%);padding:.5rem .75rem;border-radius:999px;font-size:.95rem}
 
 .hero-art{position:relative}
 .hero-art img{width:100%; height:auto; border-radius: var(--radius-l); border:1px solid color-mix(in oklab, var(--text), transparent 88%); box-shadow: var(--elev-2)}
